@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/news_test.js" defer></script>
+    <style>
+        .accordion-item {
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .accordion-item__title {
+            font-size: 20px;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .accordion-item__title::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            height: 2px;
+            width: 15px;
+            background: black;
+        }
+
+        .accordion-item__title::after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: 16px;
+            height: 15px;
+            width: 2px;
+            background: black;
+            transition: all ease 0.2s;
+        }
+
+        .accordion-item__title.active::after {
+            transform: rotate(90deg);
+        }
+
+        .accordion-item__content {
+            transition: height .25s ease;
+            overflow: hidden;
+        }
+
+        .accordion-item__content-wr {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .accordion-item__content:not(.active) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="elements-h">
+            <div class="emblem">
+                <a href="index.html">
+                    <img class="" src="icons/emblem.jpg" alt="MAIN ICON">
+                </a>
+            </div>
+
+            <div class="icon">
+                <div class="info-el">
+                    <div>
+                        <img src="icons/address.png" alt="ICON">
+                    </div>
+                    <p class="text-h">Адрес: г.Переславль&#8209;Залесский, ул.Свободы,&#8209;д.42а</p>
+                </div>
+
+                <div class="info-el">
+                    <img src="icons/email.jpg" alt="ICON">
+                    <p class="text-h">Email:&nbsp;zrb@pereslavl.ru</p>
+                </div>
+
+                <div class="info-el">
+                    <img src="icons/phone.png" alt="ICON">
+                    <p class="text-h">Телефон: 8&nbsp;(48535)&nbsp;6&#8209;64&#8209;00; 3&#8209;23&#8209;19</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="container">
+        <div class="menu-burger">
+            <div class="emblem-mobile">
+                <a class="a-logo" href="index.html">
+                    <img class="logo" src="icons/emblem-mobile.jpg" alt="MAIN ICON">
+                </a>
+            </div>
+
+            <div class="burger">
+                <span></span>
+            </div>
+
+            <ul class="navbar">
+                <li class="nav-li"><a class="nav-a" href="about.html">О&nbsp;нас</a></li>
+                <li class="nav-li"><a class="nav-a" href="doctors.html">Врачи</a></li>
+                <li class="nav-li"><a class="nav-a" href="for_patients.html">Пациентам</a></li>
+                <li class="nav-li"><a class="nav-a" href="news.html">Новости</a></li>
+                <li class="nav-li"><a class="nav-a" href="contacts.html">Контакты</a></li>
+                <li class="nav-li"><a class="nav-a" href="registration.html">Платные услуги</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Lorem ipsum dolor sit amet.</div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Ut enim ad minim veniam.</div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+<div class="accordion-item">
+    <div class="accordion-item__title">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.
+    </div>
+    <div class="accordion-item__content">
+        <div class="accordion-item__content-wr">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="main-foo">
+            <div class="contacts-foo">
+                <div>
+                    <img class="" src="icons/emblem-footer.jpg" alt="MAIN ICON">
+                </div>
+                <div class="cont-el">
+                    <!--                        <img src="icons/map-pointer.jpg" alt="map">-->
+                    <p>Адрес: г.Переславль-Залесский, ул.Свободы, д.42а</p>
+                </div>
+                <div class="cont-el">
+                    <!--                        <img src="icons/mail.jpg" alt="mail">-->
+                    <p>Email: zrb@pereslavl.ru</p>
+                </div>
+                <div class="cont-el">
+                    <!--                        <img src="icons/ph.jpg" alt="phone">-->
+                    <p>Телефоны: 8 (48535) 6-64-00; 3-23-19</p>
+                </div>
+            </div>
+
+            <div class="links-main">
+                <div class="links-foo">
+                    <ul class="navbar-foo">
+                        <li><a href="#" class="links-foo-el">Главная</a></li>
+                        <li><a href="#" class="links-foo-el">О нас</a></li>
+                        <li><a href="#" class="links-foo-el">Врачи</a></li>
+                        <li><a href="#" class="links-foo-el">Пациентам</a></li>
+                        <li><a href="#" class="links-foo-el">Новости</a></li>
+                        <li><a href="#" class="links-foo-el">Контакты</a></li>
+                        <li><a href="#" class="links-foo-el">Лицензии</a></li>
+                        <li><a href="#" class="links-foo-el">Вопрос-ответ</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-foo media-lf">
+                    <ul class="navbar-foo">
+                        <li><a href="#" class="links-foo-el">Диспансеризация</a></li>
+                        <li><a href="#" class="links-foo-el">Платные услуги</a></li>
+                        <li><a href="#" class="links-foo-el">Антикоррупционная политика</a></li>
+                        <li><a href="#" class="links-foo-el">Памятки</a></li>
+                        <li><a href="#" class="links-foo-el">Видеоролики</a></li>
+                        <li><a href="#" class="links-foo-el">Центр здоровья</a></li>
+                        <li><a href="#" class="links-foo-el">История больницы</a></li>
+                        <li><a href="#" class="links-foo-el">Свободная ссылка</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="last-block">
+                <div class="social">
+                    <a href="https://www.facebook.com/pereslavskayaCRB" target="_blank"><img src="icons/fbico.png"
+                                                                                             alt="f"></a>
+                    <a href="https://vk.com/club141579395" target="_blank"><img src="icons/vcico.png" alt="vk"></a>
+                    <a href="https://ok.ru/group/53577243689038" target="_blank"><img src="icons/okico.png"
+                                                                                      alt="ok"></a>
+                </div>
+                <div class="copy">&copy;2021 Переславская ЦРБ</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

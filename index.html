@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/burger.js" defer></script>
+    <script src="js/slider.js" defer></script>
+</head>
+<body>
+<div>
+    <div class="header">
+        <div class="container">
+            <div class="elements-h">
+                <div class="emblem">
+                    <a href="index.html">
+                        <img class="" src="icons/emblem.jpg" alt="MAIN ICON">
+                    </a>
+                </div>
+
+                <div class="icon">
+                    <div class="info-el">
+                        <div>
+                            <img src="icons/address.png" alt="ICON">
+                        </div>
+                        <p class="text-h">Адрес: г.Переславль&#8209;Залесский, ул.Свободы,&#8209;д.42а</p>
+                    </div>
+
+                    <div class="info-el">
+                        <img src="icons/email.jpg" alt="ICON">
+                        <p class="text-h">Email:&nbsp;zrb@pereslavl.ru</p>
+                    </div>
+
+                    <div class="info-el">
+                        <img src="icons/phone.png" alt="ICON">
+                        <p class="text-h">Телефон: 8&nbsp;(48535)&nbsp;6&#8209;64&#8209;00; 3&#8209;23&#8209;19</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="container">
+            <div class="menu-burger">
+                <div class="emblem-mobile">
+                    <a class="a-logo" href="index.html">
+                        <img class="logo" src="icons/emblem-mobile.jpg" alt="MAIN ICON">
+                    </a>
+                </div>
+
+                <div class="burger">
+                    <span></span>
+                </div>
+
+                <ul class="navbar">
+                    <li class="nav-li"><a class="nav-a" href="about.html">О&nbsp;нас</a></li>
+                    <li class="nav-li"><a class="nav-a" href="doctors.html">Врачи</a></li>
+                    <li class="nav-li"><a class="nav-a" href="for_patients.html">Пациентам</a></li>
+                    <li class="nav-li"><a class="nav-a" href="news.html">Новости</a></li>
+                    <li class="nav-li"><a class="nav-a" href="contacts.html">Контакты</a></li>
+                    <li class="nav-li"><a class="nav-a" href="registration.html">Платные услуги</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="item">
+            <img src="images/slider/stvac.webp" alt="Первый слайд">
+            <div class="slideText">Заголовок слайда 1</div>
+        </div>
+
+        <div class="item">
+            <img src="images/slider/tamograf.jpg" alt="Второй слайд">
+            <div class="slideText">Заголовок слайда 2</div>
+        </div>
+
+        <div class="item">
+            <img src="images/slider/helicopter.jpg" alt="Третий слайд">
+            <div class="slideText">Заголовок слайда 3</div>
+        </div>
+
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
+    </div>
+    <br>
+
+    <div class="slider-dots">
+        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="bkg-img">
+        <div class="container">
+            <div class="main_news">
+                <div class="main_news_block">
+                    <img src="images/YZI_DET.jpg" alt="photo">
+                    <div class="main_news_text">
+                        <h4>УЗИ для детей</h4>
+                        <p>
+                            Процедуру УЗИ проводит врач высшей квалификационной категории Тевяшов Аркадий Владимирович.
+                        </p>
+                        <p>Запись по телефону: 8(901)273&#8209;27&#8209;81</p>
+                    </div>
+                </div>
+                <div class="main_news_block">
+                    <img src="images/sale.jpg" alt="photo">
+                    <div class="main_news_text">
+                        <h4>Компьютеризация и организация розничной торговли в Переславскоv районе.</h4>
+                        <p>На текущий момент в 12 населенных пунктах
+                            организована розничная торговля лекарственными препаратами.
+                        </p>
+                    </div>
+                </div>
+                <div class="main_news_block">
+                    ГБУЗ ЯО "Переславская ЦРБ" требуются специалисты
+                </div>
+                <div class="main_news_block color">
+                    О работе стоматологической поликлиники ГБУЗ ЯО "Переславской ЦРБ"
+                </div>
+                <div class="main_news_block">
+                    Алгоритм действий населения в условиях риска
+                    распространения новой коронавирусной инфекции
+                </div>
+                <div class="main_news_block">
+                    Единая региональная информационно-справочная служба «122»
+                </div>
+                <div class="main_news_block">
+                    ГБУЗ ЯО "Переславская ЦРБ" требуются специалисты
+                </div>
+                <div class="main_news_block">
+                    О работе стоматологической поликлиники ГБУЗ ЯО "Переславской ЦРБ"
+                </div>
+            </div>
+
+            <div class="gosuslugi">
+                <script src='https://pos.gosuslugi.ru/bin/script.min.js'></script>
+                <style>
+                    #js-show-iframe-wrapper {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        min-width: 293px;
+                        max-width: 100%;
+                        background: linear-gradient(138.4deg, #38bafe 26.49%, #2d73bc 79.45%);
+                        color: #fff;
+                        cursor: pointer
+                    }
+
+                    #js-show-iframe-wrapper .pos-banner-fluid * {
+                        box-sizing: border-box
+                    }
+
+                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2 {
+                        display: block;
+                        width: 240px;
+                        min-height: 56px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        cursor: pointer;
+                        background: #0d4cd3;
+                        color: #fff;
+                        border: none;
+                        border-radius: 8px;
+                        outline: 0
+                    }
+
+                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:hover {
+                        background: #1d5deb
+                    }
+
+                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:focus {
+                        background: #2a63ad
+                    }
+
+                    #js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:active {
+                        background: #2a63ad
+                    }
+
+                    @-webkit-keyframes fadeInFromNone {
+                        0% {
+                            display: none;
+                            opacity: 0
+                        }
+                        1% {
+                            display: block;
+                            opacity: 0
+                        }
+                        100% {
+                            display: block;
+                            opacity: 1
+                        }
+                    }
+
+                    @keyframes fadeInFromNone {
+                        0% {
+                            display: none;
+                            opacity: 0
+                        }
+                        1% {
+                            display: block;
+                            opacity: 0
+                        }
+                        100% {
+                            display: block;
+                            opacity: 1
+                        }
+                    }
+
+                    @font-face {
+                        font-family: LatoWebLight;
+                        src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff2) format("woff2"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff) format("woff"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.ttf) format("truetype");
+                        font-style: normal;
+                        font-weight: 400
+                    }
+
+                    @font-face {
+                        font-family: LatoWeb;
+                        src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff2) format("woff2"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff) format("woff"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.ttf) format("truetype");
+                        font-style: normal;
+                        font-weight: 400
+                    }
+
+                    @font-face {
+                        font-family: LatoWebBold;
+                        src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff2) format("woff2"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff) format("woff"), url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.ttf) format("truetype");
+                        font-style: normal;
+                        font-weight: 400
+                    }
+                </style>
+
+                <style>
+                    #js-show-iframe-wrapper .bf-2 {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns:var(--pos-banner-fluid-2__grid-template-columns);
+                        grid-template-rows:var(--pos-banner-fluid-2__grid-template-rows);
+                        width: 100%;
+                        max-width: 1060px;
+                        font-family: LatoWeb, sans-serif;
+                        box-sizing: border-box
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__decor {
+                        grid-column: var(--pos-banner-fluid-2__decor-grid-column);
+                        grid-row: var(--pos-banner-fluid-2__decor-grid-row);
+                        padding: var(--pos-banner-fluid-2__decor-padding);
+                        background: var(--pos-banner-fluid-2__bg-url) var(--pos-banner-fluid-2__bg-position) no-repeat;
+                        background-size: var(--pos-banner-fluid-2__bg-size)
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__logo-wrap {
+                        position: absolute;
+                        top: var(--pos-banner-fluid-2__logo-wrap-top);
+                        bottom: var(--pos-banner-fluid-2__logo-wrap-bottom);
+                        right: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        padding: var(--pos-banner-fluid-2__logo-wrap-padding);
+                        background: #2d73bc;
+                        border-radius: var(--pos-banner-fluid-2__logo-wrap-border-radius)
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__logo {
+                        width: 128px
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__slogan {
+                        font-family: LatoWebBold, sans-serif;
+                        font-size: var(--pos-banner-fluid-2__slogan-font-size);
+                        line-height: var(--pos-banner-fluid-2__slogan-line-height);
+                        color: #fff
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__content {
+                        padding: var(--pos-banner-fluid-2__content-padding)
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__description {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 24px
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__text {
+                        margin-bottom: 12px;
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-family: LatoWebBold, sans-serif;
+                        color: #fff
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__text_small {
+                        margin-bottom: 0;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-family: LatoWeb, sans-serif
+                    }
+
+                    #js-show-iframe-wrapper .bf-2__btn-wrap {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                    }
+                </style>
+                <div id='js-show-iframe-wrapper'>
+                    <div class='pos-banner-fluid bf-2'>
+
+                        <div class='bf-2__decor'>
+                            <div class='bf-2__logo-wrap'>
+                                <img
+                                        class='bf-2__logo'
+                                        src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg'
+                                        alt='Госуслуги'
+                                />
+                                <div class='bf-2__slogan'>Решаем вместе</div>
+                            </div>
+                        </div>
+                        <div class='bf-2__content'>
+
+                            <div class='bf-2__description'>
+                  <span class='bf-2__text'>
+                    Не убран мусор, яма на дороге, не горит фонарь?
+                  </span>
+                                <span class='bf-2__text bf-2__text_small'>
+                    Столкнулись с проблемой&nbsp;— сообщите о ней!
+                  </span>
+                            </div>
+
+                            <div class='bf-2__btn-wrap'>
+                                <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
+                                <button
+                                        class='pos-banner-btn_2'
+                                        type='button'
+                                >Сообщить о проблеме
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <script>
+
+                    (function () {
+                        "use strict";
+
+                        function ownKeys(e, t) {
+                            var o = Object.keys(e);
+                            if (Object.getOwnPropertySymbols) {
+                                var n = Object.getOwnPropertySymbols(e);
+                                if (t) n = n.filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(e, t).enumerable
+                                });
+                                o.push.apply(o, n)
+                            }
+                            return o
+                        }
+
+                        function _objectSpread(e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var o = null != arguments[t] ? arguments[t] : {};
+                                if (t % 2) ownKeys(Object(o), true).forEach(function (t) {
+                                    _defineProperty(e, t, o[t])
+                                }); else if (Object.getOwnPropertyDescriptors) Object.defineProperties(e, Object.getOwnPropertyDescriptors(o)); else ownKeys(Object(o)).forEach(function (t) {
+                                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(o, t))
+                                })
+                            }
+                            return e
+                        }
+
+                        function _defineProperty(e, t, o) {
+                            if (t in e) Object.defineProperty(e, t, {
+                                value: o,
+                                enumerable: true,
+                                configurable: true,
+                                writable: true
+                            }); else e[t] = o;
+                            return e
+                        }
+
+                        var POS_PREFIX_2 = "--pos-banner-fluid-2__", posOptionsInitial = {
+                            "grid-template-columns": "100%",
+                            "grid-template-rows": "310px auto",
+                            "decor-grid-column": "initial",
+                            "decor-grid-row": "initial",
+                            "decor-padding": "30px 30px 0 30px",
+                            "bg-url": "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg')",
+                            "bg-position": "calc(10% + 64px) calc(100% - 20px)",
+                            "bg-size": "cover",
+                            "content-padding": "0 30px 30px 30px",
+                            "slogan-font-size": "20px",
+                            "slogan-line-height": "32px",
+                            "logo-wrap-padding": "20px 30px 30px 40px",
+                            "logo-wrap-top": "0",
+                            "logo-wrap-bottom": "initial",
+                            "logo-wrap-border-radius": "0 0 0 80px"
+                        }, setStyles = function (e, t) {
+                            Object.keys(e).forEach(function (o) {
+                                t.style.setProperty(POS_PREFIX_2 + o, e[o])
+                            })
+                        }, removeStyles = function (e, t) {
+                            Object.keys(e).forEach(function (e) {
+                                t.style.removeProperty(POS_PREFIX_2 + e)
+                            })
+                        };
+
+                        function changePosBannerOnResize() {
+                            var e = document.documentElement, t = _objectSpread({}, posOptionsInitial),
+                                o = document.getElementById("js-show-iframe-wrapper"),
+                                n = o ? o.offsetWidth : document.body.offsetWidth;
+                            if (n > 405) t["slogan-font-size"] = "24px", t["logo-wrap-padding"] = "30px 50px 30px 70px";
+                            if (n > 500) t["grid-template-columns"] = "min-content 1fr", t["grid-template-rows"] = "100%", t["decor-grid-column"] = "2", t["decor-grid-row"] = "1", t["decor-padding"] = "30px 30px 30px 0", t["content-padding"] = "30px", t["bg-position"] = "0% calc(100% - 70px)", t["logo-wrap-padding"] = "30px 30px 24px 40px", t["logo-wrap-top"] = "initial", t["logo-wrap-bottom"] = "0", t["logo-wrap-border-radius"] = "80px 0 0 0";
+                            if (n > 585) t["bg-position"] = "0% calc(100% - 6px)";
+                            if (n > 800) t["bg-url"] = "url('https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2.svg')", t["bg-position"] = "0% center";
+                            if (n > 1020) t["slogan-font-size"] = "32px", t["line-height"] = "40px", t["logo-wrap-padding"] = "30px 30px 24px 50px";
+                            setStyles(t, e)
+                        }
+
+                        changePosBannerOnResize(), window.addEventListener("resize", changePosBannerOnResize), window.onunload = function () {
+                            var e = document.documentElement;
+                            window.removeEventListener("resize", changePosBannerOnResize), removeStyles(posOptionsInitial, e)
+                        };
+                    })()
+                </script>
+                <script>Widget("https://pos.gosuslugi.ru/form", 226387)</script>
+            </div>
+
+            <div class="useful">
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/ank_wom.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/dispban.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/doverie.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el useful_column">
+                        <img class="useful_img" src="images/useful_img/min/fss.png" alt="photo">
+                        <p>Фонд социального страхования Российской Федерации</p>
+                    </div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/memo.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el useful_column">
+                        <img class="useful_img" src="images/useful_img/min/russia.png" alt="photo">
+                        <p>Здоровая Россия</p>
+                    </div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/stopinsult.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/yanezavisim.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/zdorpit.jpg" alt="photo"></div>
+                </a></div>
+                <div class="useful_block">
+                    <a href="#">
+                        <div class="useful_el">
+                            <img src="images/useful_img/min/eagle.jpg" alt="photo">
+                            <p>НЕЗАВИСИМАЯ ОЦЕНКА МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/covidbanner.png" alt="photo"></div>
+                </a></div>
+                <div class="useful_block"><a href="#">
+                    <div class="useful_el"><img src="images/useful_img/min/rabotavtf.jpg" alt="photo"></div>
+                </a></div>
+            </div>
+
+            <!--            <div class="img-list">-->
+            <!--                <div><img class="img-mid" src="images/donor.jpg" alt="img_donor"></div>-->
+            <!--                <div><img class="img-mid" src="images/doverie.jpg" alt="img_doverie"></div>-->
+            <!--                <div><img class="img-mid" src="images/zdorpit.jpg" alt="img_zdorpit"></div>-->
+            <!--                <div><img class="img-mid" src="images/stopinsult.jpg" alt="img_stopinsult"></div>-->
+            <!--            </div>-->
+
+            <!--            <video controls="controls">-->
+            <!--                <source src="video/diabetdeti.mp4" type="video/mp4">-->
+            <!--            </video>-->
+
+            <div class="map">
+                <div style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/10837/pereslavl-zalesskiy/?utm_medium=mapframe&utm_source=maps"
+                       style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                        Переславль‑Залесский
+                    </a>
+                    <a href="https://yandex.ru/maps/10837/pereslavl-zalesskiy/house/ulitsa_svobody_42a/Z0EYfgFpS0cFQFtsfXtyeHhlYQ==/?ll=38.869222%2C56.739465&utm_medium=mapframe&utm_source=maps&z=17.09"
+                       style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Свободы, 42А — Яндекс.Карты
+                    </a>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCUayWDY9C" width="100%" height="400" frameborder="1"
+                            allowfullscreen="true" style="position:relative;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="main-foo">
+                <div class="contacts-foo">
+                    <div>
+                        <img class="" src="icons/emblem-footer.jpg" alt="MAIN ICON">
+                    </div>
+                    <div class="cont-el">
+                        <!--                        <img src="icons/map-pointer.jpg" alt="map">-->
+                        <p>Адрес: г.Переславль-Залесский, ул.Свободы, д.42а</p>
+                    </div>
+                    <div class="cont-el">
+                        <!--                        <img src="icons/mail.jpg" alt="mail">-->
+                        <p>Email: zrb@pereslavl.ru</p>
+                    </div>
+                    <div class="cont-el">
+                        <!--                        <img src="icons/ph.jpg" alt="phone">-->
+                        <p>Телефоны: 8 (48535) 6-64-00; 3-23-19</p>
+                    </div>
+                </div>
+
+                <div class="links-main">
+                    <div class="links-foo">
+                        <ul class="navbar-foo">
+                            <li><a href="#" class="links-foo-el">Главная</a></li>
+                            <li><a href="#" class="links-foo-el">О нас</a></li>
+                            <li><a href="#" class="links-foo-el">Врачи</a></li>
+                            <li><a href="#" class="links-foo-el">Пациентам</a></li>
+                            <li><a href="#" class="links-foo-el">Новости</a></li>
+                            <li><a href="#" class="links-foo-el">Контакты</a></li>
+                            <li><a href="#" class="links-foo-el">Лицензии</a></li>
+                            <li><a href="#" class="links-foo-el">Вопрос-ответ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-foo media-lf">
+                        <ul class="navbar-foo">
+                            <li><a href="#" class="links-foo-el">Диспансеризация</a></li>
+                            <li><a href="#" class="links-foo-el">Платные услуги</a></li>
+                            <li><a href="#" class="links-foo-el">Антикоррупционная политика</a></li>
+                            <li><a href="#" class="links-foo-el">Памятки</a></li>
+                            <li><a href="#" class="links-foo-el">Видеоролики</a></li>
+                            <li><a href="#" class="links-foo-el">Центр здоровья</a></li>
+                            <li><a href="#" class="links-foo-el">История больницы</a></li>
+                            <li><a href="#" class="links-foo-el">Свободная ссылка</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="last-block">
+                    <div class="social">
+                        <a href="https://www.facebook.com/pereslavskayaCRB" target="_blank"><img src="icons/fbico.png"
+                                                                                                 alt="f"></a>
+                        <a href="https://vk.com/club141579395" target="_blank"><img src="icons/vcico.png" alt="vk"></a>
+                        <a href="https://ok.ru/group/53577243689038" target="_blank"><img src="icons/okico.png"
+                                                                                          alt="ok"></a>
+                    </div>
+                    <div class="copy">&copy;2021 Переславская ЦРБ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
