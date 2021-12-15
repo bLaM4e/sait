@@ -1,0 +1,416 @@
+@font-face {
+		font-family: "GothamProRegular";
+		src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+		src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+		url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProBold";
+		src: url("../fonts/GothamProBold/GothamProBold.eot");
+		src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+		url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProBlack";
+		src: url("../fonts/GothamProBlack/GothamProBlack.eot");
+		src: url("../fonts/GothamProBlack/GothamProBlack.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProBlack/GothamProBlack.woff") format("woff"),
+		url("../fonts/GothamProBlack/GothamProBlack.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProItalic";
+		src: url("../fonts/GothamProItalic/GothamProItalic.eot");
+		src: url("../fonts/GothamProItalic/GothamProItalic.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProItalic/GothamProItalic.woff") format("woff"),
+		url("../fonts/GothamProItalic/GothamProItalic.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProMedium";
+		src: url("../fonts/GothamProMedium/GothamProMedium.eot");
+		src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
+		url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProLight";
+		src: url("../fonts/GothamProLight/GothamProLight.eot");
+		src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+		url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProMediumItalic";
+		src: url("../fonts/GothamProMediumItalic/GothamProMediumItalic.eot");
+		src: url("../fonts/GothamProMediumItalic/GothamProMediumItalic.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProMediumItalic/GothamProMediumItalic.woff") format("woff"),
+		url("../fonts/GothamProMediumItalic/GothamProMediumItalic.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProLightItalic";
+		src: url("../fonts/GothamProLightItalic/GothamProLightItalic.eot");
+		src: url("../fonts/GothamProLightItalic/GothamProLightItalic.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProLightItalic/GothamProLightItalic.woff") format("woff"),
+		url("../fonts/GothamProLightItalic/GothamProLightItalic.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProBoldItalic";
+		src: url("../fonts/GothamProBoldItalic/GothamProBoldItalic.eot");
+		src: url("../fonts/GothamProBoldItalic/GothamProBoldItalic.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProBoldItalic/GothamProBoldItalic.woff") format("woff"),
+		url("../fonts/GothamProBoldItalic/GothamProBoldItalic.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "GothamProBlackItalic";
+		src: url("../fonts/GothamProBlackItalic/GothamProBlackItalic.eot");
+		src: url("../fonts/GothamProBlackItalic/GothamProBlackItalic.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/GothamProBlackItalic/GothamProBlackItalic.woff") format("woff"),
+		url("../fonts/GothamProBlackItalic/GothamProBlackItalic.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #e8eef2;
+	color: #27292b;
+	font-family: GothamPro,Helvetica,Open Sans,sans-serif,arial;
+	font-size: 15px;
+	/*line-height: 1.4em;*/
+}
+
+.header_container {
+	height: 150px;
+	max-width: 1328px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1328px;
+	margin: 0 auto;
+}
+
+.selection_wrapper {
+	background-color: #fff;
+}
+
+.selection {
+	font-size: 14px;
+	line-height: 19px;
+	padding: 22px 0;
+}
+
+.selection a {
+	text-decoration: none;
+	color: #004CE3;
+}
+
+.select_link_first:after {
+	content: "—";
+	margin: 0 0.2rem;
+}
+
+.select_link:after {
+	content: "—";
+	margin: 0 0.2rem;
+	color: #999EA6
+}
+
+.selection .select_link_last {
+	color: #999EA6;
+}
+
+.headline {
+	height: 90px;
+	background-color: #fff;
+	line-height: 90px;
+}
+
+.vacancies_titles {
+	font-weight: 900;
+	font-size: 26px;
+	color: #003151;
+}
+
+.table_wrapper {
+	background-color: #fff;
+	padding-bottom: 96px;
+}
+
+.table {
+	border-collapse: collapse;
+}
+
+.table td {
+	border: 1px solid #E8EEF2;
+}
+
+.table_title {
+	height: 54px;
+	text-align: center;
+	font-weight: bold;
+}
+.table_title:last-child,
+.table_title:first-child {
+	width: 222px;
+}
+.table_title:nth-child(2),
+.table_title:nth-child(3),
+.table_title:nth-child(4) {
+	width: 294px;
+}
+
+.table_title_row {
+	vertical-align: top;
+	line-height: 24px;
+	text-align: left;
+	padding: 15px;
+	font-weight: bold;
+}
+
+.table_list {
+	list-style-type: none;
+	padding: 15px;
+}
+
+.table_list li {
+	line-height: 27px;
+}
+
+.table_list li:before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	background-color: #007BFF;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 7px;
+	margin-right: 10px;
+}
+
+.table_td_btn {
+	padding: 15px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.table_btn {
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 14px 24px;
+	color: #FFFFFF;
+	background-color: #007BFF;
+}
+
+.resume_wrapper {
+	background-color: #fff;
+}
+
+.resume_title {
+	height: 58px;
+}
+
+.form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form_block {
+	width: 600px;
+	height: 310px;
+}
+
+.form_text_title {
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	color: #828688;
+	margin: 16px 0 8px 0;
+}
+.form_text_title:after {
+	content: "";
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: #FF0000;
+	border-radius: 50%;
+	margin: 2px 1px;
+}
+
+.form_input{
+	width: 600px;
+	height: 38px;
+	padding: 0 12px;
+	border: 1px solid #E8EEF2;
+	box-sizing: border-box;
+}
+
+.form_select {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #E8EEF2;
+	padding: 0 12px;
+}
+
+.form_arrow {
+	position: relative;
+	width: 6px;
+	height: 4px;
+}
+
+.form_arrow span {
+	position: absolute;
+	left: -2px;
+	bottom: 1px;
+	height: 2px;
+	width: 100%;
+	transform: rotate(45deg);
+	background-color: #27292B;
+	transition: all .4s ease 0s;
+}
+
+.form_arrow:after {
+	content: "";
+	position: absolute;
+	right: -2px;
+	bottom: 1px;
+	width: 100%;
+	height: 2px;
+	transform: rotate(-45deg);
+	background-color: #27292B;
+	transition: all .4s ease 0s;
+}
+
+.form_arrow.form_arrov_active span {
+	transform: rotate(-45deg);
+}
+
+.form_arrow.form_arrov_active:after {
+	transform: rotate(45deg);
+}
+
+.form_drop_out {
+	display: none;
+	position: relative;
+	z-index: 1;
+}
+
+.form_active {
+	display: block;
+}
+
+.form_drop_out_ul {
+	position: absolute;
+	background-color: #FFFFFF;
+	width: 100%;
+}
+
+.form_drop_out_ul li{
+	list-style-type: none;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #E8EEF2;
+	border-top: 0;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+.form_drop_out_ul li:hover {
+	background-color: #E8EEF2;
+}
+
+.form_checkbox {
+	position: relative;
+	margin: 8px 0 16px 0;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	color: #828688;
+}
+
+.form_resume {
+	display: flex;
+	height: 109px;
+	border: 1px solid #E8EEF2;
+	padding: 0 12px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form_resume_empty {
+	display: none;
+}
+
+.form_resume_ok {
+	display: flex;
+	align-items: center;
+}
+.form_resume_ok img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.form_checkbox p {
+	position: absolute;
+	top: 0;
+	left: 20px;
+}
+
+.form_checkbox_link {
+	text-decoration: none;
+	color: #007BFF;
+	opacity: 0.8;
+}
+
+.form_button {
+	background-color: #007BFF;
+	padding: 11px 20px;
+	color: #FFFFFF;
+	border: none;
+	font-size: 16px;
+}
+
+.btn_transition {
+	transition: all .4s ease-out;
+}
+.btn_transition:hover {
+	background-color: #003151;
+	border-color: #003151;
+}
