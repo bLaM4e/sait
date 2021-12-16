@@ -8,27 +8,36 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="header">
+    <!-- <div class="header">
         <div class="header_container">
             <img src="images/cap.png" alt="photo">
         </div>
     </div>
-
+ -->
 
 
     <div class="selection_wrapper">
         <div class="container">
-            <div class="selection">
-                <a class="select_link_first" href="#">Главная</a>
-                <a class="select_link" href="#">О&nbsp;компании</a>
-                <a class="select_link_last">Вакансии</a>
+            <div class="content_centering">
+                <div class="selection">
+                    <a class="select_link_first" href="#">Главная</a>
+                    <a class="select_link" href="#">О&nbsp;компании</a>
+                    <a class="select_link_last">Вакансии</a>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="headline">
         <div class="container">
-            <h4 class="vacancies_titles">Вакансии</h4>
+            <div class="content_centering">
+                <div class="headline_block">
+                    <h4 class="vacancies_titles">Вакансии</h4>
+                    <div class="headline_block_btn">
+                        <a href="#resume"><button class="table_btn btn_transition">Оставить резюме</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -45,7 +54,7 @@
                 <tr>
                     <td class="table_title_row"><p>Менеджер по поддажам и работе с клиентами</p></td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list requirement_mobile">
                             <li>Опыт работы в продажах</li>
                             <li>Умение общаться с клиентами</li>
                             <li>Уверенная работа на компьютере</li>
@@ -57,14 +66,14 @@
                         </ul>
                     </td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list duty_mobile">
                             <li class="table_li">Общение с клиентами, осуществление продаж, консультирование клиентов по холодильным камерам, агрегатам).</li>
                             <li>Общение с поставщиками, монтажными бригадами, логистика.</li>
                             <li>Ведение проекта клиентов, в том числе документация.</li>
                         </ul>
                     </td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list condition_mobaile">
                             <li>Полный рабочий день, можно выбрать график 9-18, 9:30-18:30, 10:00-19:00.</li>
                             <li>Оклад 40 000 руб. + %% от продаж + премии, 60-90 т.р. и выше.</li>
                             <li>Обучение продажам.</li>
@@ -79,7 +88,7 @@
                 <tr>
                     <td class="table_title_row"><p>Менеджер по поддажам и работе с клиентами</p></td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list requirement_mobile">
                             <li>Опыт работы в продажах</li>
                             <li>Умение общаться с клиентами</li>
                             <li>Уверенная работа на компьютере</li>
@@ -91,14 +100,14 @@
                         </ul>
                     </td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list duty_mobile">
                             <li class="table_li">Общение с клиентами, осуществление продаж, консультирование клиентов по холодильным камерам, агрегатам).</li>
                             <li>Общение с поставщиками, монтажными бригадами, логистика.</li>
                             <li>Ведение проекта клиентов, в том числе документация.</li>
                         </ul>
                     </td>
                     <td>
-                        <ul class="table_list">
+                        <ul class="table_list condition_mobaile">
                             <li>Полный рабочий день, можно выбрать график 9-18, 9:30-18:30, 10:00-19:00.</li>
                             <li>Оклад 40 000 руб. + %% от продаж + премии, 60-90 т.р. и выше.</li>
                             <li>Обучение продажам.</li>
@@ -114,13 +123,13 @@
         </div>  
     </div>
 
-    <div class="resume_wrapper">
-        <a name="resume"></a>
+    <div id="resume" class="resume_wrapper">
         <div class="container">
-            <div class="resume_title">
-                <h4 class="vacancies_titles">Оставить резюме</h4>
-            </div>
-        
+            <div class="content_centering">
+                <div class="resume_title">
+                    <h4 class="vacancies_titles">Оставить резюме</h4>
+                </div>
+            
 
             <div class="form_wrapper">
                 <form action="#">
@@ -140,18 +149,18 @@
                             </div>
                             <div class="form_text">
                                 <p class="form_text_title">Удобное время для звонка</p>
-                                <div class="form_select">
-                                    <p>Менеджер по продажам и работе с клиентами</p>
+                                <div tabindex="4" class="form_select">
+                                    <p>В любое время</p>
                                     <div class="form_arrow">
                                         <span></span>
                                     </div>
                                 </div>
                                 <div class="form_drop_out">
                                     <ul class="form_drop_out_ul">
-                                        <li>В любое время</li>
-                                        <li>В утреннее время с 7:00 до 9:00</li>
-                                        <li>В рабочие часы с 9:00 до 18:00</li>
-                                        <li>В вечернее время с 18:00 до 21:00</li>
+                                        <li><p>В любое время</p></li>
+                                        <li><p>В утреннее время с 7:00 до 9:00</p></li>
+                                        <li><p>В рабочие часы с 9:00 до 18:00</p></li>
+                                        <li><p>В вечернее время с 18:00 до 21:00</p></li>
                                     </ul>
                                 </div>
                                 <!-- <select class="form_select" tabindex="4" name="time">
@@ -165,7 +174,7 @@
                         <div class="form_block">
                             <div class="form_text">
                                 <p class="form_text_title">Желаемая должность</p>
-                                <div class="form_select">
+                                <div tabindex="5" class="form_select">
                                     <p>Менеджер по продажам и работе с клиентами</p>
                                     <div class="form_arrow">
                                         <span></span>
@@ -173,12 +182,12 @@
                                 </div>
                                 <div class="form_drop_out">
                                     <ul class="form_drop_out_ul">
-                                        <li>Желаемой должности нет, но я хочу работать с вами</li>
-                                        <li>Менеджер по продажам и работе с клиентами</li>
-                                        <li>Менеджер по продажам и работе с клиентами</li>
-                                        <li>Менеджер по продажам и работе с клиентами</li>
-                                        <li>Менеджер по продажам и работе с клиентами</li>
-                                        <li>Менеджер по продажам и работе с клиентами</li>
+                                        <li><p>Желаемой должности нет, но я хочу работать с вами</p></li>
+                                        <li><p>Менеджер по продажам и работе с клиентами</p></li>
+                                        <li><p>Менеджер по продажам и работе с клиентами</p></li>
+                                        <li><p>Менеджер по продажам и работе с клиентами</p></li>
+                                        <li><p>Менеджер по продажам и работе с клиентами</p></li>
+                                        <li><p>Менеджер по продажам и работе с клиентами</p></li>
                                     </ul>
                                 </div>
                                 <!-- <select class="form_select" tabindex="5" name="post">
@@ -201,7 +210,7 @@
                                     </div>
 
                                     <div>
-                                        <button tabindex="6" class="form_button btn_transition">Выбрать файл</button>
+                                        <button tabindex="6" type="file" class="form_button btn_transition">Выбрать файл</button>
                                     </div>
                                 </div>
                             </div>
@@ -214,22 +223,23 @@
                                 </div>
                             </div>
                             <div>
-                                <button class="form_button btn_transition" tabindex="8" type="submit">Отправить</button>
+                                <button class="form_button btn_transition send_mobile" tabindex="8" type="submit">Отправить</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>  
+            </div>
+        </div>
     </div>
 
 
 
-    <div style="background-color: #ffff; height: 30px;"></div>
-    <div class="footer" style="margin-top: 30px;">
+    <div style="background-color: #ffff; height: 750px;"></div>
+    <!-- <div class="footer" style="margin-top: 30px;">
         <div class="container">
             <img src="images/footer.png" alt="photo">
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

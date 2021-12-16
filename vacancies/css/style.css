@@ -129,7 +129,7 @@ body {
 .selection {
 	font-size: 14px;
 	line-height: 19px;
-	padding: 22px 0;
+	padding: 19px 0;
 }
 
 .selection a {
@@ -156,6 +156,15 @@ body {
 	height: 90px;
 	background-color: #fff;
 	line-height: 90px;
+}
+
+.headline_block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.headline_block_btn {
+	display: none;
 }
 
 .vacancies_titles {
@@ -246,12 +255,13 @@ body {
 
 .form {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 .form_block {
-	width: 600px;
-	height: 310px;
+	max-width: 600px;
+	width: 100%;
 }
 
 .form_text_title {
@@ -272,7 +282,7 @@ body {
 }
 
 .form_input{
-	width: 600px;
+	width: 100%;
 	height: 38px;
 	padding: 0 12px;
 	border: 1px solid #E8EEF2;
@@ -283,10 +293,11 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 38px;
+	min-height: 38px;
 	line-height: 38px;
 	border: 1px solid #E8EEF2;
 	padding: 0 12px;
+	box-sizing: border-box;
 }
 
 .form_arrow {
@@ -318,11 +329,11 @@ body {
 	transition: all .4s ease 0s;
 }
 
-.form_arrow.form_arrov_active span {
+.form_arrow.form_arrow_active span {
 	transform: rotate(-45deg);
 }
 
-.form_arrow.form_arrov_active:after {
+.form_arrow.form_arrow_active:after {
 	transform: rotate(45deg);
 }
 
@@ -340,17 +351,29 @@ body {
 	position: absolute;
 	background-color: #FFFFFF;
 	width: 100%;
+	height: 0;
+	transition: all .4s ease 0s;
+	overflow: hidden;
 	filter: drop-shadow(0px 13px 20px rgba(164, 174, 195, 0.35));
+}
+
+.out_ul_active1 {
+	height: 152px;
+}
+
+.out_ul_active2 {
+	height: 228px;
 }
 
 .form_drop_out_ul li{
 	list-style-type: none;
-	height: 38px;
-	line-height: 38px;
+	min-height: 38px;
 	border: 1px solid #E8EEF2;
 	border-top: 0;
 	padding: 0 12px;
 	box-sizing: border-box;
+	display: flex;
+	align-items: center;
 }
 .form_drop_out_ul li:hover {
 	background-color: #E8EEF2;
@@ -367,6 +390,7 @@ body {
 
 .form_resume {
 	display: flex;
+	flex-wrap: wrap;
 	height: 109px;
 	border: 1px solid #E8EEF2;
 	padding: 0 12px;
@@ -379,6 +403,7 @@ body {
 }
 
 .form_resume_ok {
+	/*display: none;*/
 	display: flex;
 	align-items: center;
 }
@@ -415,3 +440,133 @@ body {
 	background-color: #003151;
 	border-color: #003151;
 }
+
+@media (max-width: 1024px) {
+	.content_centering {
+		max-width: 831px;
+		margin: auto;
+	}
+
+	.headline_block_btn {
+		display: block;
+		flex-grow: 0;
+		padding-right: 20px;
+	}
+
+	.selection,
+	.vacancies_titles {
+		flex-grow: 1;
+		padding-left: 20px;
+	}
+
+	.table {
+		margin: auto;
+	}
+
+	.table td {
+		display: block;
+		border-top: 0;
+		border-bottom: 0;
+		margin: 0 5px;
+	}
+
+	.table td:last-child {
+		border-bottom: 1px solid #E8EEF2;
+	}
+
+	.table .table_title_row {
+		border-top: 1px solid #E8EEF2;
+	}
+
+	.table_title_row {
+		padding: 10px 5px 0 5px;
+	}
+
+
+	.table_title:not(.table_title_mobile) {
+		display: none;
+	}
+
+	.condition_mobaile:before,
+	.duty_mobile:before,
+	.requirement_mobile:before {
+		content: 'Требования';
+		font-weight: bold;
+		display: block;
+		padding: 10px 0 5px 0;
+	}
+
+	.duty_mobile:before {
+		content: 'Обязанности';
+	}
+
+	.condition_mobaile:before {
+	}
+
+	.table_list {
+		padding: 0 5px;
+	}
+
+	.table_td_btn {
+		padding: 10px 0 10px 5px;
+		text-align: left;
+	}
+
+	.table_wrapper {
+		padding-bottom: 25px;
+	}
+
+	.resume_title {
+		height: 47px;
+	}
+
+	.form {
+		padding: 0 20px;
+	}
+
+	.form_text_title {
+		margin: 8px 0;
+	}
+
+	.form_drop_out_ul {
+		width: 108%;
+		left: -4%;
+	}
+
+	.form_drop_out_ul li,
+	.form_select {
+		line-height: 20px;
+		padding: 10px 12px 8px 12px;
+	}
+
+	.out_ul_active1 {
+		height: 156px;
+	}
+
+	.out_ul_active2 {
+		height: 354px;
+	}
+
+	.form_resume {
+		border: 0;
+	}
+
+	.resume_empty_mobile {
+		justify-content: flex-start;
+		padding: 0;
+		height: auto;
+	}
+
+	/*.form_resume p {
+		display: none;
+	}*/
+
+	.form_button {
+		padding: 14px 20px;
+	}
+
+	.send_mobile {
+		margin-top: 30px;
+	}
+}
+
