@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 
 
     <div class="selection_wrapper">
-        <div class="container">
+        <div class="container_vacancies">
             <div class="content_centering">
                 <div class="selection">
                     <a class="select_link_first" href="#">Главная</a>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="headline">
-        <div class="container">
+        <div class="container_vacancies">
             <div class="content_centering">
                 <div class="headline_block">
                     <h4 class="vacancies_titles">Вакансии</h4>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="table_wrapper">
-        <div class="container">
+        <div class="container_vacancies">
             <table class="table">
                 <tr>
                     <td class="table_title">Наименование вакансии</td>
@@ -124,7 +124,7 @@
     </div>
 
     <div id="resume" class="resume_wrapper">
-        <div class="container">
+        <div class="container_vacancies">
             <div class="content_centering">
                 <div class="resume_title">
                     <h4 class="vacancies_titles">Оставить резюме</h4>
@@ -137,20 +137,20 @@
                         <div class="form_block">
                             <div class="form_text">
                                 <p class="form_text_title">Ваше имя</p>
-                                <input tabindex="1" class="form_input" type="text">
+                                <input tabindex="1" class="form_input form_user_name" type="text" name="username">
                             </div>
                             <div class="form_text">
                                 <p class="form_text_title">Контактный телефон</p>
-                                <input tabindex="2" class="form_input" type="tel">
+                                <input tabindex="2" class="form_input" type="tel" name="phone">
                             </div>
                             <div class="form_text">
                                 <p class="form_text_title">Почта</p>
-                                <input tabindex="3" class="form_input" type="text">
+                                <input tabindex="3" class="form_input" type="text" name="mail">
                             </div>
                             <div class="form_text">
                                 <p class="form_text_title">Удобное время для звонка</p>
                                 <div tabindex="4" class="form_select">
-                                    <p>В любое время</p>
+                                    <p class="text_in_block">В любое время</p>
                                     <div class="form_arrow">
                                         <span></span>
                                     </div>
@@ -163,19 +163,13 @@
                                         <li><p>В вечернее время с 18:00 до 21:00</p></li>
                                     </ul>
                                 </div>
-                                <!-- <select class="form_select" tabindex="4" name="time">
-                                    <option value="any_time">В любое время</option>
-                                    <option value="morning">В утреннее время с 7:00 до 9:00</option>
-                                    <option value="job_time">В рабочие часы с 9:00 до 18:00</option>
-                                    <option value="evening">В вечернее время с 18:00 до 21:00</option>
-                                </select> -->
                             </div>
                         </div>
                         <div class="form_block">
                             <div class="form_text">
                                 <p class="form_text_title">Желаемая должность</p>
                                 <div tabindex="5" class="form_select">
-                                    <p>Менеджер по продажам и работе с клиентами</p>
+                                    <p class="text_in_block">Менеджер по продажам и работе с клиентами</p>
                                     <div class="form_arrow">
                                         <span></span>
                                     </div>
@@ -190,12 +184,6 @@
                                         <li><p>Менеджер по продажам и работе с клиентами</p></li>
                                     </ul>
                                 </div>
-                                <!-- <select class="form_select" tabindex="5" name="post">
-                                    <option value="post_null">Желаемой должности нет, но я хочу работать с вами</option>
-                                    <option selected value="sell">Менеджер по продажам и работе с клиентами</option>
-                                    <option value="sell">Менеджер по продажам и работе с клиентами</option>
-                                    <option value="sell">Менеджер по продажам и работе с клиентами</option>
-                                </select> -->
                             </div>
                             <div class="form_text">
                                 <p class="form_text_title">Ваше резюме</p>
@@ -206,11 +194,14 @@
 
                                     <div class="form_resume_ok">
                                         <img src="images/mask_group.png" alt="pin">
-                                        <p>Иванов Иван - резюме</p>
+                                        <p class="user_name_resume">Иванов Иван - резюме</p>
                                     </div>
-
-                                    <div>
-                                        <button tabindex="6" type="file" class="form_button btn_transition">Выбрать файл</button>
+                                    
+                                    <div class="input_wrapper">
+                                       <input name="file" type="file" name="file" id="input_file" class="input_file" multiple>
+                                       <label for="input_file" class="input_file_button">
+                                          <span class="input_file_button_text">Выберите файл</span>
+                                       </label>
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +228,7 @@
 
     <div style="background-color: #ffff; height: 750px;"></div>
     <!-- <div class="footer" style="margin-top: 30px;">
-        <div class="container">
+        <div class="container_vacancies">
             <img src="images/footer.png" alt="photo">
         </div>
     </div> -->

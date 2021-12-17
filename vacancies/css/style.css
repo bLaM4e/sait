@@ -117,7 +117,8 @@ body {
 	margin: 0 auto;
 }
 
-.container {
+.container_vacancies {
+	padding: 0 10px;
 	max-width: 1328px;
 	margin: 0 auto;
 }
@@ -357,14 +358,6 @@ body {
 	filter: drop-shadow(0px 13px 20px rgba(164, 174, 195, 0.35));
 }
 
-.out_ul_active1 {
-	height: 152px;
-}
-
-.out_ul_active2 {
-	height: 228px;
-}
-
 .form_drop_out_ul li{
 	list-style-type: none;
 	min-height: 38px;
@@ -399,14 +392,21 @@ body {
 }
 
 .form_resume_empty {
+	display: block;
+}
+.resume_empty_toggle {
 	display: none;
 }
 
 .form_resume_ok {
-	/*display: none;*/
-	display: flex;
+	display: none;
 	align-items: center;
+	padding-bottom: 8px;
 }
+.resume_ok_toggle {
+	display: flex;
+}
+
 .form_resume_ok img {
 	width: 50px;
 	height: 50px;
@@ -441,7 +441,30 @@ body {
 	border-color: #003151;
 }
 
+.input_wrapper {
+	position: relative;
+}
+
+.input_file {
+	position: absolute;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.input_file_button_text {
+	padding: 14px 20px;
+	background: #007BFF;
+	font-size: 16px;
+	color: #FFFFFF;
+	display: inline-block;
+}
+
 @media (max-width: 1024px) {
+	.container_vacancies {
+		padding: 0;
+	}
+
 	.content_centering {
 		max-width: 831px;
 		margin: auto;
@@ -549,6 +572,10 @@ body {
 
 	.form_resume {
 		border: 0;
+		justify-content: space-between;
+		padding: 0;
+		height: auto;
+		margin-bottom: 16px;
 	}
 
 	.resume_empty_mobile {
@@ -557,9 +584,9 @@ body {
 		height: auto;
 	}
 
-	/*.form_resume p {
+	.form_resume_empty {
 		display: none;
-	}*/
+	}
 
 	.form_button {
 		padding: 14px 20px;
