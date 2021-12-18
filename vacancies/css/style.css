@@ -290,6 +290,14 @@ body {
 	box-sizing: border-box;
 }
 
+.form_error {
+	border: 1px solid #FF0000;
+}
+
+.form_error_checkbox {
+	color: red;
+}
+
 .form_select {
 	display: flex;
 	justify-content: space-between;

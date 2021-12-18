@@ -60,12 +60,81 @@ const selectMenu = {
 	},
 
 	removeActiveClass(dropOut, selectBlock) {
+		dropOut.childNodes[1].removeEventListener('click', this.userSelectionFunc);
+
 		dropOut.childNodes[1].style.height = 0;
 		selectBlock.childNodes[3].classList.remove('form_arrow_active');
 
 		setTimeout(() => {
 			dropOut.classList.remove('form_active');
 		}, 400);
+	},
+}
+
+const formValidate = {
+	form: document.querySelector('.vacancies_form'),
+	formInputs: document.querySelectorAll('._req'),
+	inputEmail: document.querySelector('.js_input_email'),
+	inputPhone: document.querySelector('.js_input_phone'),
+	inputCheckbox: document.querySelector('.js_input_checkbox'),
+
+	init() {
+		this.form.onsubmit = this.validations.bind(this);
+	},
+
+	validations() {
+		let emailVal = this.inputEmail.value,
+			phoneVal = this.inputPhone.value,
+			emptyInputs = [...this.formInputs].filter(input => input.value === '')
+
+		this.formInputs.forEach(function(input) {
+			if (input.value === '') {
+				input.classList.add('form_error');
+			} else {
+				input.classList.remove('form_error');
+			}
+		});
+
+		if (emptyInputs.length !== 0) {
+			alert('Вы заполнили не все обязательные поля');
+			return false;
+		}
+
+		if (!this.validatePhone(phoneVal)) {
+			alert('Неверно введен номер телефона');
+			this.inputPhone.classList.add('form_error');
+			return false;
+		} else {
+			this.inputPhone.classList.remove('form_error');
+		}
+
+		if(!this.validateEmail(emailVal)) {
+			alert('Неверно введет электронный адрес');
+			this.inputEmail.classList.add('form_error');
+			return false;
+		} else {
+			this.inputEmail.classList.remove('form_error');
+		}
+
+		if(!this.inputCheckbox.checked) {
+			alert('Вы не дали согласие на обработку персональных данных')
+			this.inputCheckbox.nextElementSibling.classList.add('form_error_checkbox');
+			return false;
+		} else {
+			this.inputCheckbox.nextElementSibling.classList.remove('form_error_checkbox')
+		}
+
+		alert('Спасибо за отправку формы, с вами обязательно свяжутся')
+	},
+
+	validatePhone(phone) {
+		let re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+		return re.test(String(phone));
+	},
+
+	validateEmail(email) {
+		let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(String(email).toLowerCase());
 	},
 }
 
@@ -106,5 +175,6 @@ const downloadResume = {
 }
 
 selectMenu.init();
+formValidate.init();
 scroll.toElement();
 downloadResume.upload();
