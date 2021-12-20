@@ -78,8 +78,18 @@ const formValidate = {
 	inputPhone: document.querySelector('.js_input_phone'),
 	inputCheckbox: document.querySelector('.js_input_checkbox'),
 
-	init() {
+	go() {
 		this.form.onsubmit = this.validations.bind(this);
+
+		this.inputPhone.addEventListener('focus', _ => {
+			if(!/^\+\d*$/.test(this.inputPhone.value))
+				this.inputPhone.value = '+';
+		});
+
+		this.inputPhone.addEventListener('keypress', event => {
+			if(!/\d/.test(event.key))
+				event.preventDefault();
+		});
 	},
 
 	validations() {
@@ -146,6 +156,11 @@ const scroll = {
 			anchor.addEventListener('click', event => {
 				event.preventDefault();
 
+				const jobTitleText = event.target.parentElement.parentElement.parentElement
+									.querySelector('.table_title_row').textContent;
+
+				document.querySelector('.form_select_post').textContent = jobTitleText;
+
 				const blockID = event.target.parentElement.getAttribute('href').slice(1);
 
 				document.getElementById(blockID).scrollIntoView({
@@ -175,6 +190,6 @@ const downloadResume = {
 }
 
 selectMenu.init();
-formValidate.init();
+formValidate.go();
 scroll.toElement();
 downloadResume.upload();
