@@ -157,9 +157,11 @@ const scroll = {
 				event.preventDefault();
 
 				const jobTitleText = event.target.parentElement.parentElement.parentElement
-									.querySelector('.table_title_row').textContent;
-
-				document.querySelector('.form_select_post').textContent = jobTitleText;
+									.querySelector('.table_title_row');
+				console.log(jobTitleText)
+				if (jobTitleText !== null) {
+					document.querySelector('.form_select_post').textContent = jobTitleText.textContent;
+				}
 
 				const blockID = event.target.parentElement.getAttribute('href').slice(1);
 
