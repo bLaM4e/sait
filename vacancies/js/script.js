@@ -158,7 +158,6 @@ const scroll = {
 
 				const jobTitleText = event.target.parentElement.parentElement.parentElement
 									.querySelector('.table_title_row');
-				console.log(jobTitleText)
 				if (jobTitleText !== null) {
 					document.querySelector('.form_select_post').textContent = jobTitleText.textContent;
 				}
