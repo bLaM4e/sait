@@ -111,6 +111,10 @@ body {
 	/*line-height: 1.4em;*/
 }
 
+input {
+    outline: none;
+}
+
 .header_container {
 	height: 150px;
 	max-width: 1328px;
@@ -128,6 +132,7 @@ body {
 }
 
 .selection {
+    font-family: GothamProRegular;
 	font-size: 14px;
 	line-height: 19px;
 	padding: 19px 0;
@@ -169,7 +174,8 @@ body {
 }
 
 .vacancies_titles {
-	font-weight: 900;
+	font-family: 'GothamProBold';
+    font-weight: 900;
 	font-size: 26px;
 	color: #003151;
 }
@@ -187,10 +193,14 @@ body {
 	border: 1px solid #E8EEF2;
 }
 
+.table td:not(.table_title) {
+    vertical-align: top;
+}
+
 .table_title {
 	height: 54px;
 	text-align: center;
-	font-weight: bold;
+	font-family: GothamProMedium;
 }
 .table_title:last-child,
 .table_title:first-child {
@@ -207,7 +217,7 @@ body {
 	line-height: 24px;
 	text-align: left;
 	padding: 15px;
-	font-weight: bold;
+	font-family: GothamProMedium;
 }
 
 .table_list {
@@ -216,10 +226,12 @@ body {
 }
 
 .table_list li {
+    font-family: GothamProRegular;
 	line-height: 27px;
+    display: flex;
 }
 
-.table_list li:before {
+.table_marker::before {
 	content: "";
 	width: 7px;
 	height: 7px;
@@ -228,6 +240,7 @@ body {
 	display: inline-block;
 	line-height: 7px;
 	margin-right: 10px;
+    margin-bottom: 1px;
 }
 
 .table_td_btn {
@@ -237,11 +250,12 @@ body {
 }
 
 .table_btn {
+    font-family: GothamProMedium;
 	cursor: pointer;
 	border: none;
 	font-size: 16px;
 	line-height: 16px;
-	padding: 14px 24px;
+	padding: 14px 23px;
 	color: #FFFFFF;
 	background-color: #007BFF;
 }
@@ -266,6 +280,7 @@ body {
 }
 
 .form_text_title {
+    font-family: 'GothamProRegular';
 	font-weight: 300;
 	font-size: 12px;
 	line-height: 14px;
@@ -283,6 +298,8 @@ body {
 }
 
 .form_input{
+    font-family: GothamProRegular;
+    font-size: 15px;
 	width: 100%;
 	height: 38px;
 	padding: 0 12px;
@@ -299,6 +316,8 @@ body {
 }
 
 .form_select {
+    font-family: GothamProRegular;
+    font-size: 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -367,6 +386,8 @@ body {
 }
 
 .form_drop_out_ul li{
+    font-family: GothamProRegular;
+    font-size: 15px;
 	list-style-type: none;
 	min-height: 38px;
 	border: 1px solid #E8EEF2;
@@ -380,9 +401,17 @@ body {
 	background-color: #E8EEF2;
 }
 
+.form_checkbox_wrapper {
+    font-family: 'GothamProRegular';
+    color: #828688;
+    font-size: 12px;
+    display: flex;
+    margin: 8px 0;
+}
+
 .form_checkbox {
-	position: relative;
-	margin: 8px 0 16px 0;
+    box-sizing: border-box;
+	margin-right: 7px;
 	font-weight: 300;
 	font-size: 12px;
 	line-height: 14px;
@@ -421,12 +450,6 @@ body {
 	margin-right: 10px;
 }
 
-.form_checkbox p {
-	position: absolute;
-	top: 0;
-	left: 20px;
-}
-
 .form_checkbox_link {
 	text-decoration: none;
 	color: #007BFF;
@@ -434,6 +457,7 @@ body {
 }
 
 .form_button {
+    font-family: 'GothamProMedium';
 	background-color: #007BFF;
 	padding: 11px 20px;
 	color: #FFFFFF;
@@ -461,6 +485,7 @@ body {
 }
 
 .input_file_button_text {
+    font-family: 'GothamProMedium';
 	padding: 14px 20px;
 	background: #007BFF;
 	font-size: 16px;
@@ -547,6 +572,10 @@ body {
 		padding-bottom: 25px;
 	}
 
+    .table_marker::before {
+        margin-right: 5px;
+    }
+
 	.resume_title {
 		height: 47px;
 	}
@@ -579,6 +608,7 @@ body {
 	}
 
 	.form_resume {
+        font-family: 'GothamProRegular';
 		border: 0;
 		justify-content: space-between;
 		padding: 0;
@@ -598,10 +628,6 @@ body {
 
 	.form_button {
 		padding: 14px 20px;
-	}
-
-	.send_mobile {
-		margin-top: 30px;
 	}
 }
 

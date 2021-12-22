@@ -178,19 +178,53 @@ const downloadResume = {
 	resumeEmpty: document.querySelector('.form_resume_empty'),
 	resumeOk: document.querySelector('.form_resume_ok'),
 	resumeTitle: document.querySelector('.user_name_resume'),
+    dropZone: document.querySelector('.form_resume'),
+
+    init() {
+        this.upload();
+        this.dropFoo();
+    },
+
+    dropFoo() {
+        this.dropZone.addEventListener('dragenter', event => {
+            event.preventDefault();
+        })
+
+        this.dropZone.addEventListener('dragleave', event => {
+            event.preventDefault();
+        })
+        this.dropZone.addEventListener('dragover', event => {
+            event.preventDefault();
+        })
+
+        this.dropZone.addEventListener('drop', event => {
+            event.preventDefault();
+
+            const nameFile = event.dataTransfer.files[0].name;
+
+            this.resumeRender(nameFile);
+        });
+    },
+
 
 	upload() {
-		this.inputButton.addEventListener('change', () => {
-			const nameVal = document.querySelector('.form_user_name').value;
+		this.inputButton.addEventListener('change', event => {
+            const nameFile = event.target.files[0].name;
 
-			this.resumeEmpty.classList.add('resume_empty_toggle');
-			this.resumeOk.classList.add('resume_ok_toggle');
-			this.resumeTitle.textContent = nameVal + ' - резюме';
+			this.resumeRender(nameFile);
 		});
-	}
+	},
+
+    resumeRender(fileName) {
+        const nameVal = document.querySelector('.form_user_name').value;
+
+        this.resumeEmpty.classList.add('resume_empty_toggle');
+        this.resumeOk.classList.add('resume_ok_toggle');
+        this.resumeTitle.textContent = nameVal + ' - ' + fileName;
+    }
 }
 
 selectMenu.init();
 formValidate.go();
 scroll.toElement();
-downloadResume.upload();
+downloadResume.init();
