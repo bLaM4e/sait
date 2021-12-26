@@ -1,5 +1,5 @@
 @font-face {
-		font-family: "GothamProRegular";
+		font-family: "GothamPro";
 		src: url("../fonts/GothamProRegular/GothamProRegular.eot");
 		src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
 		url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
@@ -8,7 +8,7 @@
 		font-weight: normal;
 }
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProBold";
 		src: url("../fonts/GothamProBold/GothamProBold.eot");
 		src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
@@ -16,19 +16,19 @@
 		url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
-}
+} */
 
 @font-face {
-		font-family: "GothamProBlack";
+		font-family: "GothamPro";
 		src: url("../fonts/GothamProBlack/GothamProBlack.eot");
 		src: url("../fonts/GothamProBlack/GothamProBlack.eot?#iefix")format("embedded-opentype"),
 		url("../fonts/GothamProBlack/GothamProBlack.woff") format("woff"),
 		url("../fonts/GothamProBlack/GothamProBlack.ttf") format("truetype");
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 900;
 }
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProItalic";
 		src: url("../fonts/GothamProItalic/GothamProItalic.eot");
 		src: url("../fonts/GothamProItalic/GothamProItalic.eot?#iefix")format("embedded-opentype"),
@@ -36,29 +36,29 @@
 		url("../fonts/GothamProItalic/GothamProItalic.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
-}
+} */
 
 @font-face {
-		font-family: "GothamProMedium";
+		font-family: "GothamPro";
 		src: url("../fonts/GothamProMedium/GothamProMedium.eot");
 		src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
 		url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
 		url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 500;
 }
 
 @font-face {
-		font-family: "GothamProLight";
+		font-family: "GothamPro";
 		src: url("../fonts/GothamProLight/GothamProLight.eot");
 		src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
 		url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
 		url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 300;
 }
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProMediumItalic";
 		src: url("../fonts/GothamProMediumItalic/GothamProMediumItalic.eot");
 		src: url("../fonts/GothamProMediumItalic/GothamProMediumItalic.eot?#iefix")format("embedded-opentype"),
@@ -66,9 +66,9 @@
 		url("../fonts/GothamProMediumItalic/GothamProMediumItalic.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProLightItalic";
 		src: url("../fonts/GothamProLightItalic/GothamProLightItalic.eot");
 		src: url("../fonts/GothamProLightItalic/GothamProLightItalic.eot?#iefix")format("embedded-opentype"),
@@ -76,9 +76,9 @@
 		url("../fonts/GothamProLightItalic/GothamProLightItalic.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProBoldItalic";
 		src: url("../fonts/GothamProBoldItalic/GothamProBoldItalic.eot");
 		src: url("../fonts/GothamProBoldItalic/GothamProBoldItalic.eot?#iefix")format("embedded-opentype"),
@@ -86,9 +86,9 @@
 		url("../fonts/GothamProBoldItalic/GothamProBoldItalic.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 		font-family: "GothamProBlackItalic";
 		src: url("../fonts/GothamProBlackItalic/GothamProBlackItalic.eot");
 		src: url("../fonts/GothamProBlackItalic/GothamProBlackItalic.eot?#iefix")format("embedded-opentype"),
@@ -96,34 +96,40 @@
 		url("../fonts/GothamProBlackItalic/GothamProBlackItalic.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
+} */
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
-* {
-	margin: 0;
-	padding: 0;
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
+input,button,textarea{font-family:inherit;}
+
+button{cursor: pointer;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body {
 	background: #e8eef2;
 	color: #27292b;
-	font-family: GothamPro,Helvetica,Open Sans,sans-serif,arial;
+	font-family: GothamPro,Helvetica,"Open Sans",sans-serif,arial;
 	font-size: 15px;
-	/*line-height: 1.4em;*/
 }
 
 input {
     outline: none;
 }
 
-.header_container {
-	height: 150px;
-	max-width: 1328px;
-	margin: 0 auto;
-}
-
 .container_vacancies {
 	padding: 0 10px;
-	max-width: 1328px;
+	max-width: 1348px;
 	margin: 0 auto;
 }
 
@@ -132,7 +138,6 @@ input {
 }
 
 .selection {
-    font-family: GothamProRegular;
 	font-size: 14px;
 	line-height: 19px;
 	padding: 19px 0;
@@ -159,14 +164,14 @@ input {
 }
 
 .headline {
-	height: 90px;
 	background-color: #fff;
-	line-height: 90px;
 }
 
 .headline_block {
 	display: flex;
 	justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 24px;
 }
 
 .headline_block_btn {
@@ -174,9 +179,9 @@ input {
 }
 
 .vacancies_titles {
-	font-family: 'GothamProBold';
     font-weight: 900;
 	font-size: 26px;
+    line-height: 34px;
 	color: #003151;
 }
 
@@ -198,13 +203,14 @@ input {
 }
 
 .table_title {
+    font-weight: 500;
 	height: 54px;
 	text-align: center;
-	font-family: GothamProMedium;
 }
+
 .table_title:last-child,
 .table_title:first-child {
-	width: 222px;
+	width: 223px;
 }
 .table_title:nth-child(2),
 .table_title:nth-child(3),
@@ -213,11 +219,11 @@ input {
 }
 
 .table_title_row {
+    font-weight: 500;
 	vertical-align: top;
 	line-height: 24px;
 	text-align: left;
 	padding: 15px;
-	font-family: GothamProMedium;
 }
 
 .table_list {
@@ -226,7 +232,6 @@ input {
 }
 
 .table_list li {
-    font-family: GothamProRegular;
 	line-height: 27px;
     display: flex;
 }
@@ -250,12 +255,10 @@ input {
 }
 
 .table_btn {
-    font-family: GothamProMedium;
 	cursor: pointer;
 	border: none;
 	font-size: 16px;
-	line-height: 16px;
-	padding: 14px 23px;
+	padding: 14px 24px;
 	color: #FFFFFF;
 	background-color: #007BFF;
 }
@@ -280,7 +283,6 @@ input {
 }
 
 .form_text_title {
-    font-family: 'GothamProRegular';
 	font-weight: 300;
 	font-size: 12px;
 	line-height: 14px;
@@ -297,8 +299,9 @@ input {
 	margin: 2px 1px;
 }
 
+
+
 .form_input{
-    font-family: GothamProRegular;
     font-size: 15px;
 	width: 100%;
 	height: 38px;
@@ -316,13 +319,11 @@ input {
 }
 
 .form_select {
-    font-family: GothamProRegular;
     font-size: 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: 38px;
-	line-height: 38px;
 	border: 1px solid #E8EEF2;
 	padding: 0 12px;
 	box-sizing: border-box;
@@ -386,7 +387,6 @@ input {
 }
 
 .form_drop_out_ul li{
-    font-family: GothamProRegular;
     font-size: 15px;
 	list-style-type: none;
 	min-height: 38px;
@@ -402,9 +402,9 @@ input {
 }
 
 .form_checkbox_wrapper {
-    font-family: 'GothamProRegular';
     color: #828688;
     font-size: 12px;
+	font-weight: 300;
     display: flex;
     margin: 8px 0;
 }
@@ -412,8 +412,6 @@ input {
 .form_checkbox {
     box-sizing: border-box;
 	margin-right: 7px;
-	font-weight: 300;
-	font-size: 12px;
 	line-height: 14px;
 	color: #828688;
 }
@@ -453,13 +451,11 @@ input {
 .form_checkbox_link {
 	text-decoration: none;
 	color: #007BFF;
-	opacity: 0.8;
 }
 
 .form_button {
-    font-family: 'GothamProMedium';
 	background-color: #007BFF;
-	padding: 11px 20px;
+	padding: 14px 20px;
 	color: #FFFFFF;
 	border: none;
 	font-size: 16px;
@@ -485,7 +481,6 @@ input {
 }
 
 .input_file_button_text {
-    font-family: 'GothamProMedium';
 	padding: 14px 20px;
 	background: #007BFF;
 	font-size: 16px;
@@ -509,8 +504,16 @@ input {
 		padding-right: 20px;
 	}
 
-	.selection,
-	.vacancies_titles {
+    .headline_block {
+        padding: 32px 0 16px 20px;
+    }
+
+    .vacancies_titles {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+	.selection {
 		flex-grow: 1;
 		padding-left: 20px;
 	}
@@ -547,16 +550,13 @@ input {
 	.duty_mobile:before,
 	.requirement_mobile:before {
 		content: 'Требования';
-		font-weight: bold;
+		font-weight: 500;
 		display: block;
 		padding: 10px 0 5px 0;
 	}
 
 	.duty_mobile:before {
 		content: 'Обязанности';
-	}
-
-	.condition_mobaile:before {
 	}
 
 	.table_list {
@@ -608,7 +608,6 @@ input {
 	}
 
 	.form_resume {
-        font-family: 'GothamProRegular';
 		border: 0;
 		justify-content: space-between;
 		padding: 0;
