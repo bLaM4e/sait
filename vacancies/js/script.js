@@ -4,22 +4,35 @@ const selectMenu = {
 	selectItems: document.querySelectorAll('.form_select'),
 
 	init() {
-		for (let i = 0; i < this.selectItems.length; i++) {
-			const selectBlock = this.selectItems[i];
-			let dropOut = this.selectItems[i].nextElementSibling;
+        document.querySelector('body').addEventListener('click', event => {
+            if ([...event.target.classList].includes('form_select')) {
+                this.addRemoveDropDownBlock(event.target);
+            } else if ([...event.target.classList].includes('text_in_block') || [...event.target.classList].includes('form_arrow')) {
+                this.addRemoveDropDownBlock(event.target.parentElement);
+            } else if ([...event.target.parentElement.classList].includes('form_arrow')) {
+                this.addRemoveDropDownBlock(event.target.parentElement.parentElement);
+            } else {
+                for (let i = 0; i < this.selectItems.length; i++) {
+                    const selectBlock = this.selectItems[i];
+                    const dropOut = this.selectItems[i].nextElementSibling;
 
-			selectBlock.addEventListener('click', () => {
-
-				if (![...dropOut.classList].includes('form_active')) {
-					this.addActiveClass(dropOut, selectBlock);
-
-					dropOut.childNodes[1].addEventListener('click', this.userSelectionFunc);
-				} else {
-					this.removeActiveClass(dropOut, selectBlock);
-				}
-			});
-		}
+                    this.removeActiveClass(dropOut, selectBlock);
+                }
+            }
+        });
 	},
+
+    addRemoveDropDownBlock(selectBlock) {
+        let dropOut = selectBlock.nextElementSibling;
+
+        if (![...dropOut.classList].includes('form_active')) {
+            this.addActiveClass(dropOut, selectBlock);
+
+            dropOut.childNodes[1].addEventListener('click', this.userSelectionFunc);
+        } else {
+            this.removeActiveClass(dropOut, selectBlock);
+        }
+    },
 
 	userSelectionFunc(event) {
 		let parentBlock = '';
@@ -216,11 +229,9 @@ const downloadResume = {
 	},
 
     resumeRender(fileName) {
-        const nameVal = document.querySelector('.form_user_name').value;
-
         this.resumeEmpty.classList.add('resume_empty_toggle');
         this.resumeOk.classList.add('resume_ok_toggle');
-        this.resumeTitle.textContent = nameVal + ' - ' + fileName;
+        this.resumeTitle.textContent = fileName;
     }
 }
 
