@@ -261,10 +261,12 @@ input {
 	padding: 14px 24px;
 	color: #FFFFFF;
 	background-color: #007BFF;
+	line-height: 1;
 }
-
 .leftright_wrapper {
-    display: none;
+	padding: 12px 0 2px;
+	display: none;
+	justify-content: center;
 }
 
 .resume_wrapper {
@@ -439,7 +441,7 @@ input {
 	display: none;
     flex-grow: 1;
 	align-items: center;
-	padding: 0 10px 8px 0;
+	padding: 0 10px 0 0;
 }
 .resume_ok_toggle {
 	display: flex;
@@ -455,8 +457,8 @@ input {
 .user_name_resume {
     position: relative;
     flex-grow: 1;
-    line-height: 20px;
-    max-height: 55px;
+    line-height: 17px;
+    max-height: 50px;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -487,6 +489,7 @@ input {
 	color: #FFFFFF;
 	border: none;
 	font-size: 16px;
+	line-height: 1;
 }
 
 .btn_transition {
@@ -515,6 +518,7 @@ input {
 	font-size: 16px;
 	color: #FFFFFF;
 	display: inline-block;
+	line-height: 1;
 }
 
 @media (max-width: 1024px) {
@@ -604,12 +608,22 @@ input {
     .table_marker::before {
         margin-right: 5px;
     }
-
-    .leftright_wrapper {
-        padding: 12px 0 2px;
+	.leftright_wrapper_active {
         display: flex;
-        justify-content: center;
     }
+
+	.table_row {
+		opacity: 0;
+		transition: 1s;
+	}
+
+	.table_row_visible {
+		opacity: 1;
+	}
+
+	.row_disable {
+		display: none;
+	}
 
     .leftright {
         display: flex;
@@ -638,6 +652,7 @@ input {
 
 	.resume_title {
 		height: 47px;
+		padding: 0 20px;
 	}
 
 	.form {
@@ -679,6 +694,10 @@ input {
 		justify-content: flex-start;
 		padding: 0;
 		height: auto;
+	}
+
+	.form_resume_ok {
+		padding: 0 10px 8px 0;
 	}
 
     .form_resume_ok img {

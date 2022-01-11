@@ -161,6 +161,113 @@ const formValidate = {
 	},
 }
 
+const jobSlider = {
+	allVacancies: document.querySelectorAll('.table_row'),
+	switchVacancies: document.querySelector('.leftright'),
+	points: document.querySelectorAll('.leftright_point'),
+	left: document.getElementById('arrow_left'),
+	right: document.getElementById('arrow_right'),
+
+	firstVisibleItem: 0,
+	secondVisibleItem: 1,
+
+	dotsList: [],
+	activeDot: 0,
+
+	init() {
+		this.renderTable();
+		this.activeSlider();
+
+		this.switchVacancies.addEventListener('click', event => {
+			if (event.target.id === 'arrow_left') {
+				this.swipeLeft();
+				this.flip();
+			} else if (event.target.id === 'arrow_right') {
+				this.swipeRight();
+				this.flip();
+			}
+
+			if ([...event.target.classList].includes('leftright_point')) {
+				this.firstVisibleItem = Number(event.target.id) * 2;
+				this.secondVisibleItem = this.firstVisibleItem + 1;
+				this.flip();
+			}
+		});
+	},
+
+	activeSlider() {
+		const dots = Math.ceil(this.allVacancies.length / 2);
+		if (dots > 1) {
+			document.querySelector('.leftright_wrapper').classList.add('leftright_wrapper_active');
+
+			this.renderDots(document.querySelector('.leftright_points'), dots);
+
+			this.dotsList = document.querySelectorAll('.leftright_point');
+		}
+	},
+
+	renderDots(block, quantityDots) {
+		for(let i = 0; i < quantityDots; i++) {
+			block.insertAdjacentHTML('beforeend', `<div id=${i} class="leftright_point"></div>`);
+		}
+
+		block.querySelector('.leftright_point').classList.add('point_active');
+	},
+
+	flip() {
+		this.renderTable();
+		this.recolorDot();
+	},
+
+	renderTable() {
+		this.allVacancies.forEach((el) => {
+			el.classList.remove('row_disable');
+			setTimeout(() => {el.classList.add('table_row_visible')}, 0);
+		});
+
+		this.allVacancies.forEach((el, i) => {
+			if (i !== this.firstVisibleItem && i !== this.secondVisibleItem) {
+				el.classList.add('row_disable');
+				setTimeout(() => {el.classList.remove('table_row_visible')}, 0);
+			}
+		});
+	},
+
+	swipeLeft() {
+		if (this.firstVisibleItem === 0 && this.allVacancies.length % 2 != 0) {
+			this.firstVisibleItem = this.allVacancies.length - 1;
+			this.secondVisibleItem = this.allVacancies.length;
+		} else if (this.firstVisibleItem === 0 && this.allVacancies.length % 2 === 0) {
+			this.firstVisibleItem = this.allVacancies.length - 2;
+			this.secondVisibleItem = this.allVacancies.length - 1;
+		} else {
+			this.firstVisibleItem -= 2;
+			this.secondVisibleItem -= 2;
+		}
+	},
+
+	swipeRight() {
+		if (this.firstVisibleItem === this.allVacancies.length - 1) {
+			this.firstVisibleItem = 0;
+			this.secondVisibleItem = 1;
+		} else if (this.secondVisibleItem === this.allVacancies.length - 1) {
+			this.firstVisibleItem = 0;
+			this.secondVisibleItem = 1;
+		} else {
+			this.firstVisibleItem += 2;
+			this.secondVisibleItem += 2;
+		}
+	},
+
+	recolorDot() {
+		this.dotsList[this.activeDot].classList.remove('point_active');
+
+		this.activeDot = Math.ceil((this.firstVisibleItem) / 2);
+
+		this.dotsList[this.activeDot].classList.add('point_active');
+	},
+}
+
 const scroll = {
 	anchors: document.querySelectorAll('.table_btn'),
 
@@ -237,5 +344,6 @@ const downloadResume = {
 
 selectMenu.init();
 formValidate.go();
+jobSlider.init();
 scroll.toElement();
 downloadResume.init();
